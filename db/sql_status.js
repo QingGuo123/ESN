@@ -18,7 +18,7 @@ module.exports = {
         return "DROP TABLE IF EXISTS Status;";
     },
     createTable: function() {
-        var sql = "CREATE TABLE Status (" +
+        var sql = "CREATE TABLE IF NOT EXISTS Status (" +
             "id SERIAL PRIMARY KEY," +
             "userid INTEGER NOT NULL," +
             "status_code INTEGER NOT NULL," +

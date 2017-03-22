@@ -21,7 +21,7 @@ module.exports = {
         return "DROP TABLE IF EXISTS Users;";
     },
     createTable: function() {
-        var sql = "CREATE TABLE Users (" +
+        var sql = "CREATE TABLE IF NOT EXISTS Users (" +
             "id SERIAL PRIMARY KEY," +
             "username CHAR(256) NOT NULL UNIQUE," +
             "password CHAR(256) NOT NULL," +
@@ -37,10 +37,11 @@ module.exports = {
         return sql;
     },
 
-    insertAdminUser: function(adminpwd) {
-        var sql = "INSERT INTO Users (username, password, onlinestatus, accountstatus, privilege) VALUES ('admin','" + adminpwd + "', 0, 0, 0)";
-        return sql;
-    },
+    // insertAdminUser: function(adminpwd) {
+    //
+    //     var sql = "INSERT INTO Users (username, password, onlinestatus, accountstatus, privilege) VALUES ('admin','" + adminpwd + "', 0, 0, 0)";
+    //     return sql;
+    // },
 
     getUser: function () {
         var sql = "SELECT * FROM Users WHERE username = ?;";

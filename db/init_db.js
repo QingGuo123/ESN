@@ -85,9 +85,9 @@ module.exports = {
             console.log("created users table ");
             if (err) throw err;
         });
-        var insertAdmin = client.query(sql_user.insertAdminUser("adminpwd"), function(err) {
-            if (err) throw err;
-        });
+        // var insertAdmin = client.query(sql_user.insertAdminUser("adminpwd"), function(err) {
+        //     if (err) throw err;
+        // });
         var createMessageTable = client.query(sql_message.createTable(), function(err) {
             console.log("created message table ");
             if (err) throw err;

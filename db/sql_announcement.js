@@ -14,7 +14,7 @@ module.exports = {
         return "DROP TABLE IF EXISTS Announcement;";
     },
     createTable: function() {
-        var sql = "CREATE TABLE Announcement (" +
+        var sql = "CREATE TABLE IF NOT EXISTS Announcement (" +
             "id SERIAL PRIMARY KEY," +
             "userid INTEGER NOT NULL," +
             "content TEXT," +
