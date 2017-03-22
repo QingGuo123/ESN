@@ -13,7 +13,7 @@ var sql_status = require('../db/sql_status');
 module.exports = {
     initDB : function(req, res){
         var pg = require('pg');
-        var conString = "postgres://bmqorflmhcmagp:a9e936c17df8559024e449c7de017dd94261fb2fe5a3f92e27aba1faa6b5fe70@ec2-54-225-230-243.compute-1.amazonaws.com:5432/d56jmo4m6aqrse";
+        var conString = "postgres://tpfvhbwcgicrwb:5f531406e338933f29d5e1b3d04c404d645566b1a3761b2abbd8570643292287@ec2-54-163-252-55.compute-1.amazonaws.com:5432/d3h7um3eqq3pmp";
         //process.env.DATABASE_URL
         //||  "postgres://onesecond:plusonesecond@localhost:5432/ecn_db";
         // pg.connect(conString, function(err, client) {
